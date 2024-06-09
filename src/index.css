@@ -1,0 +1,311 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  position: relative;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.248);
+  padding: 100px;
+  border-radius: 30px;
+  border: 4px solid #014f55;
+}
+
+.question {
+  width: 40vw;
+  height: 60px;
+  padding: 5px 20px;
+  background-color: #014f55;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.option label {
+  width: 40vw;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.option input[type="radio"]:checked + label {
+  background-color: #5077d1;
+  color: #fff;
+}
+
+.result {
+  width: 50vw;
+  height: 60vh;
+  color: white;
+  font-size: 30px;
+  background-color: #014f55;
+  border-radius: 30px;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.result span {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, 0%);
+}
+
+.score {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}
+
+img {
+  object-fit: cover;
+  width: 20px;
+  height: 13px;
+}
+
+.submit {
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: #014f55;
+  color: white;
+  border-radius: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.number {
+  color: #014f55;
+  margin: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    position: relative;
+    background: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .submit {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #014f55;
+    color: white;
+    border-radius: 20px;
+  }
+
+  .control {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .question {
+    width: 80vw;
+  }
+
+  .option label {
+    width: 80vw;
+  }
+
+  .result {
+    width: 80vw;
+    height: 60vh;
+    color: white;
+    font-size: 30px;
+    background-color: #014f55;
+    border-radius: 30px;
+    max-width: 400px;
+    max-height: 600px;
+  }
+}
+
+.resources-carousel {
+  display: flex; /* Allow sections to display side-by-side */
+  overflow-x: scroll; /* Enable horizontal scrolling if needed */
+}
+
+.resource-section {
+  flex: 1; /* Make sections take equal space */
+  padding: 1rem; /* Add some padding for visual separation */
+}
+
+.resource-section.active {
+  /* Style for the active section (e.g., highlight) */
+  background-color: #f5f5f5; /* Example style */
+}
+
+.resource-slider {
+  display: flex; /* Allow resources to display side-by-side */
+  overflow-x: scroll; /* Enable horizontal scrolling for resources */
+}
+
+.resource-item {
+  flex: 1; /* Make resources take equal space */
+  padding: 0.5rem; /* Add some padding for visual separation */
+}
+
+.resource-item.active {
+  /* Style for the active resource (e.g., highlight) */
+  font-weight: bold; /* Example style */
+}
+
+.carousel-button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.carousel-button:disabled {
+  opacity: 0.5; /* Disable button visual cue */
+}
+
+.carousel-image {
+  width: 700%; /* Set width to 100% to make the image fill the container */
+  height: 50%; /* Allow the height to adjust proportionally based on the width */
+  max-width: 60%; /* Ensure the image doesn't exceed its original size */
+}
+
+
+.digital-commerce-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
