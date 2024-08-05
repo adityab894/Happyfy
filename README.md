@@ -10,21 +10,21 @@ ChatBot: Deployed a chat bot for the website from where the user can access reso
 
 Installation
 
-Clone the repository:
+#Clone the repository:
 
 git clone <repository-url>
 cd mental-health-companion-app
 
-Install dependencies:
+#Install dependencies:
 
 npm install
-# or
+or
 yarn install
 
-Running the App
+#Running the App
 
 Start the development server:
 npm run dev
-# or
+or
 yarn dev
 Open your browser and navigate to http://localhost:3000.
