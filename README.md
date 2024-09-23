@@ -6,7 +6,7 @@ This project is a Mental Health Companion App built using React and Vite. The ap
 
 ## Demo/UI
 
-https://youtu.be/iaJFlBz7W1Y?si=spUCkq9uscOUJzA8
+![image](https://github.com/user-attachments/assets/a7beb619-73f0-423c-b5c6-4dc9822f4be1)
 
 
 ## Features
